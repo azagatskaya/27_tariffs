@@ -1,7 +1,23 @@
 .App {
+  width: 100%;
   text-align: center;
+  padding-top: 100px;
 }
-
+.wrapper {
+  max-width: 645px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media screen and (max-width: 644px) {
+  .wrapper {
+    width: 90%;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
