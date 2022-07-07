@@ -1,10 +1,14 @@
+body {
+  background-color: "#fafafa";
+}
 .App {
   width: 100%;
   text-align: center;
   padding-top: 100px;
 }
 .wrapper {
-  max-width: 645px;
+  max-width: 705px;
+  padding: 30px;
   margin: auto;
   display: flex;
   flex-direction: row;
