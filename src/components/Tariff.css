@@ -36,24 +36,13 @@
   height: 100px;
   font-size: 46px;
 }
-.price_value {
+.price > span,
+.price > sup {
+  font-size: 11px;
+}
+.price > sup {
   position: relative;
-  margin: auto;
-  display: inline;
-}
-.price_value::before {
-  content: "руб";
-  position: absolute;
-  font-size: 11px;
-  top: -4px;
-  left: -18px;
-}
-.price_value::after {
-  content: "/мес";
-  position: absolute;
-  font-size: 11px;
-  bottom: 4px;
-  right: -25px;
+  top: -18px;
 }
 .speed,
 .details {

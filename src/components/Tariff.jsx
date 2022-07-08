@@ -17,7 +17,9 @@ function Tariff(props) {
         className={styles.price}
         style={{ backgroundColor: props.tariff.color }}
       >
-        <div className={styles.price_value}>{props.tariff.price}</div>
+        <sup>руб</sup>
+        {props.tariff.price}
+        <span>/мес</span>
       </div>
       <div className={styles.speed}>До {props.tariff.speed} Мбит/сек</div>
       <div className={styles.details}>{props.tariff.details}</div>
