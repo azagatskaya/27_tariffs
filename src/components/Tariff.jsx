@@ -1,28 +1,31 @@
 import styles from "./Tariff.css";
 
-function Tariff(props) {
+function Tariff({
+  id,
+  name,
+  colorName,
+  color,
+  price,
+  speed,
+  details,
+  isSelected,
+  handleTariffSelect,
+}) {
   return (
     <div
-      className={
-        styles.card + (props.tariff.isSelected ? " " + styles.selected : "")
-      }
+      onClick={() => handleTariffSelect(id)}
+      className={styles.card + (isSelected ? " " + styles.selected : "")}
     >
-      <div
-        className={styles.name}
-        style={{ backgroundColor: props.tariff.colorName }}
-      >
-        {props.tariff.name}
+      <div className={styles.name} style={{ backgroundColor: colorName }}>
+        {name}
       </div>
-      <div
-        className={styles.price}
-        style={{ backgroundColor: props.tariff.color }}
-      >
+      <div className={styles.price} style={{ backgroundColor: color }}>
         <sup>руб</sup>
-        {props.tariff.price}
+        {price}
         <span>/мес</span>
       </div>
-      <div className={styles.speed}>До {props.tariff.speed} Мбит/сек</div>
-      <div className={styles.details}>{props.tariff.details}</div>
+      <div className={styles.speed}>До {speed} Мбит/сек</div>
+      <div className={styles.details}>{details}</div>
     </div>
   );
 }
