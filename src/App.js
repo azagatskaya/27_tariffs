@@ -49,7 +49,7 @@ function App() {
     <div className={styles.App}>
       <div className={styles.wrapper}>
         {tariffs.map(el =>
-          <Tariff {...el} handleTariffSelect={(id) => handleTariffSelect(id)} isSelected={selectedId === el.id ? true : false} />
+          <Tariff {...el} onSelect={handleTariffSelect} isSelected={selectedId === el.id} />
           )}
       </div>
       </div>

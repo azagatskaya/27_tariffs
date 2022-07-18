@@ -9,11 +9,11 @@ function Tariff({
   speed,
   details,
   isSelected,
-  handleTariffSelect,
+  onSelect,
 }) {
   return (
     <div
-      onClick={() => handleTariffSelect(id)}
+      onClick={() => onSelect(id)}
       className={styles.card + (isSelected ? " " + styles.selected : "")}
     >
       <div className={styles.name} style={{ backgroundColor: colorName }}>
